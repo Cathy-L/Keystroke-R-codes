@@ -24,7 +24,7 @@ boxplot(as.numeric(onlyKeyboard$actionTime), as.numeric(liz$x)) #creates boxplot
 boxplot(as.numeric(onlyKeyboard$actionTime), as.numeric(liz$x), col = c("red", "blue")) #colors the first data boxplot red and the other blue
 
 #to write a csv from data frame
-write.csv(onlyKeyboard$actionTime, "sydfile.csv")
+write.csv(onlyKeyboard$actionTime, "sydfile.csv") #named the file "sydfile.csv"
 
 #to read a csv
 liz <- read.csv("LizData.csv", header = TRUE) #put into variable "liz"
