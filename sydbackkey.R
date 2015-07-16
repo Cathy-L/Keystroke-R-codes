@@ -80,6 +80,8 @@ day4c <- nrow(subset(syd75night_df, output == "BACK"))/nrow(syd75nightkey)
 #backspace <- as.table(backspace)
 
 
-ratios <- c(day1a, day1b, day1c, day2a, day2b, day2c, day3a, day3b, day3c, day4a, day4b, day4c)
-plot(ratios, type = "o", col = "blue", ylab = "Ratios", main = "Back to Key Ratio", xlab = "Trial")
-axis(1, at = 1 : 12, lab = c(1:12))
+ratios1 <- c(day1a, day1b, day1c, day2a, day2b, day2c, day3a, day3b, day3c, day4a, day4b, day4c)
+
+rp <- barplot(as.numeric(ratios1), main = "Back to Key Ratio", xlab = "Trials", ylab = "Ratio")
+axis(1, at=rp, labels = 1:12 )
+
