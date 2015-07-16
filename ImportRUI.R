@@ -4,7 +4,7 @@ tim1 <- read.table("test.txt", header = TRUE, fill = TRUE)
 onlytim1key <- subset(tim1, Action == "KEY")
 
 #type colnames(tim1) into console to get the column names cause they are different
-#the first column is the action column, don't know how to name the column with numbers and get the data
+
 timtime <- as.numeric(as.character(onlytim1key$Time))
 
 timpause <- diff(timtime)
