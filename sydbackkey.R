@@ -85,3 +85,6 @@ ratios1 <- c(day1a, day1b, day1c, day2a, day2b, day2c, day3a, day3b, day3c, day4
 rp <- barplot(as.numeric(ratios1), main = "Back to Key Ratio", xlab = "Trials", ylab = "Ratio")
 axis(1, at=rp, labels = 1:12 )
 
+#mp <- barplot(rainbar$Rain,axes=F,ylim=c(0,15))
+#axis(1,at=mp,labels=rainbar$DOY)
+#example from website for future reference
