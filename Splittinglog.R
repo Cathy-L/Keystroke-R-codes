@@ -1,11 +1,11 @@
 setwd("C:/Users/STT/OneDrive/InputLogR")
 library(XML)
-test0 = xmlParse("C:/Users/STT/Documents/InputLog/Sydney1/2015-07-23_1/output/Sydney1_20150723_1_GA.xml")
+test0 = xmlParse("C:/Users/STT/Downloads/Ek_20150723_15_GA.xml")
 rawtest0 <- getNodeSet(test0, "//session/event")
 test0_df = xmlToDataFrame(nodes = rawtest0)
 #onlytest0key <- subset(test0_df, type == "keyboard")
-only9key <- subset(test0_df, output == "9")
-onlyparagraph <- test0_df[-c(285:439),]
+onlyIkey <- subset(test0_df, output == "|")
+onlyparagraph <- test0_df[-c(as.numeric(row.names(subset(test0_df, output == "|")))+1:nrow(test0_df)),]
 keyparagraph <- subset(onlyparagraph, type == "keyboard")
-onlynatural <- test0_df[-c(1:284),]
+onlynatural <- test0_df[-c(1:row.names(subset(test0_df, output == "|"))),]
 keynatural <- subset(onlynatural, type == "keyboard")
