@@ -1,0 +1,7 @@
+setwd("C:/Users/STT/OneDrive/InputLogR")
+library(XML)
+whichtest = xmlParse("C:/Users/STT/Documents/InputLog/which/2015-07-28_0/output/which_20150728_0_GA.xml")
+rawwhich <- getNodeSet(whichtest, "//session/event")
+whichtest_df = xmlToDataFrame(nodes = rawwhich)
+whichtestkey <- subset(whichtest_df, type == "keyboard")
+endpara <- min(which(grepl(8, whichtest_df$output)))
